@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "base-power-management", "base-power-management\base-power-management.csproj", "{427855D0-FCA3-455E-8FEB-D183C2221962}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{427855D0-FCA3-455E-8FEB-D183C2221962}.Debug|x64.ActiveCfg = Debug|x64
+		{427855D0-FCA3-455E-8FEB-D183C2221962}.Debug|x64.Build.0 = Debug|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32CB2F9A-CEF2-469D-B508-85A5D100285F}
+	EndGlobalSection
+EndGlobal
