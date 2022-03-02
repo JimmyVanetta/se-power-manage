@@ -43,6 +43,14 @@ namespace IngameScript
         //
         // to learn more about ingame scripts.
 
+        // power block lists
+        List<IMyBatteryBlock> batteries = new List<IMyBatteryBlock>();
+        List<IMyPowerProducer> engines = new List<IMyPowerProducer>();
+        List<IMyReactor> reactors = new List<IMyReactor>();
+
+        // engine type block definition for getting hydrogen engines
+        MyDefinitionId EngineType = MyDefinitionId.Parse("MyObjectBuilder_HydrogenEngine/");
+
         public Program()
         {
             // The constructor, called only once every session and
@@ -78,6 +86,20 @@ namespace IngameScript
             // 
             // The method itself is required, but the arguments above
             // can be removed if not needed.
+
+            // get batteries
+            GridTerminalSystem.GetBlocksOfType(batteries);
+            
+            // get hydrogen engines
+            GridTerminalSystem.GetBlocksOfType(engines, e => e.BlockDefinition.TypeId == EngineType.TypeId);
+
+            // get reactors 
+            GridTerminalSystem.GetBlocksOfType(reactors);
+
+            foreach(IMyBatteryBlock battery in batteries)
+            {
+                Echo("battery found");
+            }
         }
     }
 }
